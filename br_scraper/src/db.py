@@ -42,5 +42,6 @@ class DbWrapper():
         if not data:
             raise Exception("Data object is empty")
 
+        # missing indexing
         for item in data:
             self.db[self.db_name].insert_one(item)
