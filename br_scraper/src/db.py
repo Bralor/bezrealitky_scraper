@@ -57,7 +57,12 @@ class DbWrapper():
         if not data and not isinstance(data, list):
             raise Exception("Argument 'data' is not list or is empty")
 
-        self.collection.insert_many(data)
+        for document in data:
+            try:
+                self.collection.insert_one(document)
+
+            except pymongo.errors.DuplicateKeyError:
+                print("The duplicate index occured, continue..")
 
 
     def read_documents(self) -> list:
