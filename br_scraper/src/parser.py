@@ -12,7 +12,7 @@ class Parser:
     def parse_details(self, data: dict):
         if self.is_dict(data):
             return {
-                "id": f"{data['id']}",
+                "auction_id": f"{data['id']}",
                 "name": f"{data['uri'].split('-', maxsplit=1)[1]}",
                 "price": data["advertEstateOffer"][0]["price"],
                 "currency": data["advertEstateOffer"][0]["currency"],
