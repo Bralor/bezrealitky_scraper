@@ -26,11 +26,18 @@ sudo systemctl start mongod
 sudo systemctl status mongod
 ```
 
-b. requirements.txt
+b. Clone the repository
+
+c. Install requirements
+-requirements.txt-
 - in progress
 
 ### Usage
-...
+Run the script:
+```bash
+$ python bez_realitky.py "brno"
+```
+See to output message.
 
 ### Outputs
 ...
